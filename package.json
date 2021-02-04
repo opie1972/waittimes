@@ -1,0 +1,14 @@
+{
+  "name": "waittimes",
+  "version": "1.0.0",
+  "description": "track wait times at theme parks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "david hudman",
+  "license": "ISC",
+  "dependencies": {
+    "themeparks": "^5.1.44"
+  }
+}
