@@ -14,12 +14,15 @@ const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom
 const CheckWaitTimes = () => {
     DisneyWorldMagicKingdom.GetWaitTimes().then((rideTimes) => {
         rideTimes.forEach((ride) => {
+        // good statuses are: 'Operating'
+        if (ride.status != 'Closed' && ride.status != 'Refurbishment') {
             console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
+        }
         });
     }).catch((error) => {
         console.error(error);
     }).then(() => {
-        setTimeout(CheckWaitTimes, 1000 * 60 * 5); // refresh every 5 minutes
+        // setTimeout(CheckWaitTimes, 1000 * 60 * 5); // refresh every 5 minutes
     });
 };
 CheckWaitTimes();
