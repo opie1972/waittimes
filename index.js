@@ -1,9 +1,9 @@
-// include the Themeparks library
 const Themeparks = require("themeparks");
 
 // configure where SQLite DB sits
 // optional - will be created in node working directory if not configured
 // Themeparks.Settings.Cache = __dirname + "/themeparks.db";
+// TODO: write to csv
 
 // access a specific park
 //  Create this *ONCE* and re-use this object for the lifetime of your application
